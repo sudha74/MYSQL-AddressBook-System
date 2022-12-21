@@ -39,9 +39,9 @@ mysql> desc Persons;
 UC3 : Ability to insert new Contacts to Address Book
 
 INSERT INTO Persons ( PersonID, LastName, FirstName, Address, City,
-    -> PhoneNumber, email, zip) VALUES (1, 'Garole', 'Vinayak', 'Ranale', 'Nandurbar',
-    -> 8380867601, 'vinayakgarole10@gmail.com', 425411),(2, 'Pangare', 'Sandip', 'Rajale', 'Nandurbar',
-    ->  9856244512, 'sandippangare@gamil.com', 410001);
+    -> PhoneNumber, email, zip) VALUES (1, 'Nukala', 'Sudha', 'VivekaCircle', 'Kadapa',
+    -> 9880867509, 'sudhanukala1998@gmail.com', 425411),(2, 'Nookala', 'Rani', 'AmbedkarCircle', 'Tirupati',
+    ->  89562444566 , 'raninookala1998@gamil.com', 410001);
 Query OK, 2 rows affected (0.08 sec)
 Records: 2  Duplicates: 0  Warnings: 0
 
@@ -49,7 +49,7 @@ mysql> SELECT * FROM Persons;
 +----------+----------+-----------+---------+-----------+-------------+---------------------------+--------+
 | PersonID | LastName | FirstName | Address | City      | PhoneNumber | email                     | zip    |
 +----------+----------+-----------+---------+-----------+-------------+---------------------------+--------+
-|        1 | Garole   | Vinayak   | Ranale  | Nandurbar |  8380867601 | vinayakgarole10@gmail.com | 425411 |
-|        2 | Pangare  | Sandip    | Rajale  | Nandurbar |  9856244512 | sandippangare@gamil.com   | 410001 |
+|        1 | nukala   | Sudha  | VivekaCircle  | Kadapa |  9880867509 | sudhanukala@gmail.com | 425411 |
+|        2 | nookala | Rani    | AmbedkarCircle  | Tirupati |  89562444566 | raninookala@gamil.com   | 410001 |
 +----------+----------+-----------+---------+-----------+-------------+---------------------------+--------+
 2 rows in set (0.00 sec)
