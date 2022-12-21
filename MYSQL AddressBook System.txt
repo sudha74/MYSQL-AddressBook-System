@@ -53,3 +53,18 @@ mysql> SELECT * FROM Persons;
 |        2 | nookala | Rani    | AmbedkarCircle  | Tirupati |  89562444566 | raninookala@gamil.com   | 410001 |
 +----------+----------+-----------+---------+-----------+-------------+---------------------------+--------+
 2 rows in set (0.00 sec)
+
+UC4 : Ability to edit existing contact person
+
+ update Persons set Address = 'Mumbai' WHERE Address = 'Ranale';
+Query OK, 1 row affected (0.08 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT * FROM Persons;
++----------+----------+-----------+---------+-----------+-------------+---------------------------+--------+
+| PersonID | LastName | FirstName | Address | City      | PhoneNumber | email                     | zip    |
++----------+----------+-----------+---------+-----------+-------------+---------------------------+--------+
+|        1 | nukala | Sudha  |   VivekaCircle| Kadapa |  9380867106 | sudhanukala@gmail.com | 4905116 |
+|        2 | nookala | Rani    | AmbedkarCircle  | Tirupati |  8956244215 | raninookala@gamil.com   | 423100 |
++----------+----------+-----------+---------+-----------+-------------+---------------------------+--------+
+2 rows in set (0.00 sec)
