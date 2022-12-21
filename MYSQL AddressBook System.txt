@@ -176,3 +176,49 @@ mysql> SELECT * FROM Persons;
 |        2 | Kavya     | Madhavan  | Delhi  | KM Bazar    |  9856248976 | sudharani474@gmail.com      | 410001 |
 +----------+----------+-----------+---------+-----------+-------------+---------------------------+--------+
 5 rows in set (0.00 sec)
+
+
+UC9 : Ability to identify each Address Book with name and Type.
+
+ SELECT * FROM Persons;
++----------+----------+-----------+------+---------+-----------+-------------+---------------------------+--------+
+| PersonID | LastName | FirstName | Type | City | Address      | PhoneNumber | email                     | zip    |
++----------+----------+-----------+------+---------+-----------+-------------+---------------------------+--------+
+|        1 | Nukala   | Sudha  | NULL | Kadapa | SR Nagar |  8389067106 | sudhamadhavan1998@gmail.com | 425411 |
+|        1 | Nookala   | Rani   | NULL | Tirupati  | NR Colony |  8780897601 | raninookala97@gmail.com | 425411 |
+|        2 | Madhavan  | Kavya    | NULL | Nellore  | MK Street |  9859907512 madhavan123@gamil.com   | 410001 |
+|        1 | Sudha  | Madhavan  | NULL | Guntur  | SM Road   |  7775829087 | kavya345@gmail.com | 431202 |
+|        2 | Kavya      | Madahavan   | NULL | Delhi  | KM Bazar    |  9876755512 | sudharani474@gmail.com      | 410001 |
++----------+----------+-----------+------+---------+-----------+-------------+---------------------------+--------+
+5 rows in set (0.00 sec)
+
+mysql> update Persons set Type = 'Family' WHERE FirstName = 'Sudha';
+Query OK, 2 rows affected (0.07 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+mysql> update Persons set Type = 'Family' WHERE FirstName = 'Madhavan';
+Query OK, 1 row affected (0.12 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update Persons set Type = 'Friend' WHERE FirstName = 'Kavya';
+Query OK, 1 row affected (0.13 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update Persons set Type = 'Profession' WHERE FirstName = 'Rani';
+Query OK, 1 row affected (0.09 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+update Persons set Type = 'Friend' WHERE FirstName = 'Sudha';
+Query OK, 2 rows affected (0.07 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+mysql> SELECT * FROM Persons;
++----------+----------+-----------+------------+---------+-----------+-------------+---------------------------+--------+
+| PersonID | LastName | FirstName | Type       | Address | City      | PhoneNumber | email                     | zip    |
++----------+----------+-----------+------------+---------+-----------+-------------+---------------------------+--------+
+|        1 | Nukala   | Sudha   | Friend     | SR Nagar  | Kadapa |  8380867601 | sudhamadhavan1998@gmail.com | 425411 |
+|        1 | Nookala  | Rani   | Friend     | NR Colony  | Tirupati |  8380867601 | raninukala12@gmail.com | 425411 |
+|        2 | Madhavan  | Sudha    | Profession | MS Street  | Nellore |  9856244512 | madhavan123@gamil.com   | 410001 |
+|        1 | Kavya  | Madhavan   | Friend     | KM Bazar  | guntur   |  7775827779 | kavya45@gmail.com | 431202 |
+|        2 | Sudha      | Madhavan  | Family     | SM Road  | Delhi    |  9856244512 | sudha565@gmail.com      | 410001 |
++----------+----------+-----------+------------+---------+-----------+-------------+---------------------------+--------+
+5 rows in set (0.00 sec)
