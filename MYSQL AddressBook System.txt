@@ -81,3 +81,19 @@ mysql> SELECT * FROM Persons;
 |        1 | nukala   | Sudha  | VivekaCircle  | Kadapa | 9380867106  | sudhanukala@gmail.com | 4905116 |
 +----------+----------+-----------+---------+-----------+-------------+---------------------------+--------+
 1 row in set (0.00 sec)
+
+UC6 : Ability to Retrieve Person belonging to a City or State from the Address Book
+
+ SELECT * FROM Persons WHERE City = 'Kadapa';
++----------+----------+-----------+---------+-----------+-------------+---------------------------+--------+
+| PersonID | LastName | FirstName | Address | City      | PhoneNumber | email                     | zip    |
++----------+----------+-----------+---------+-----------+-------------+---------------------------+--------+
+|        1 | nukala   | Sudha   | VivekaCircle  | Kadapa | 9380867106   | sudhanukala@gmail.com | 425411 |
++----------+----------+-----------+---------+-----------+-------------+---------------------------+--------+
+1 row in set (0.00 sec)
+INSERT INTO Persons ( PersonID, LastName, FirstName, Address, City,
+    ->     PhoneNumber, email, zip) VALUES (1, 'nukala', 'Sudha', 'VivekaCircle', 'Kadapa',
+    ->     9380867106 , 'sudhanukala1998@gmail.com',4905116 ),(2, 'nookala', 'Rani', 'AmbedkarCircle', 'Tirupati',
+    ->     8956244215, 'raninookala1998@gamil.com', 425411);
+Query OK, 2 rows affected (0.07 sec)
+Records: 2  Duplicates: 0  Warnings: 0
