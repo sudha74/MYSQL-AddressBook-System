@@ -97,3 +97,46 @@ INSERT INTO Persons ( PersonID, LastName, FirstName, Address, City,
     ->     8956244215, 'raninookala1998@gamil.com', 425411);
 Query OK, 2 rows affected (0.07 sec)
 Records: 2  Duplicates: 0  Warnings: 0
+
+UC7 : Ability to understand the size of address book by City and State
+
+ SELECT COUNT(City) FROM Persons;
++-------------+
+| COUNT(City) |
++-------------+
+|           3 |
++-------------+
+1 row in set (0.01 sec)
+
+mysql> INSERT INTO Persons ( PersonID, LastName, FirstName, Address, City, PhoneNumber, email, zip)
+    -> VALUES (1, 'Nukala', 'Sudha', 'VivekaCircle', 'Kadapa',9005827977, 'sudhanukala1998@gmail.com', 431290),(2, 'Madhavan',
+    ->  'Sudha', 'SR Nagar', 'Nellore', 8956244215, 'sudhamadhavan1998@gmail.com', 411000);
+Query OK, 2 rows affected (0.07 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM Persons;
++----------+----------+-----------+---------+-----------+-------------+---------------------------+--------+
+| PersonID | LastName | FirstName | City | Address     | PhoneNumber | email                     | zip    |
++----------+----------+-----------+---------+-----------+-------------+---------------------------+--------+
+|        1 | Nukala  | Sudha   | Kadapa  | SR Nagar |  8080867106 | sudhamadhavan1998@gmail.com | 425411 |
+|        1 | Nookala   | Rani  | Tirupati  | NR Colony |  8390867601 | raninookala97@gmail.com | 425411 |
+|        2 | Madhavan  | Kavya    | Nellore  | MK Street |  8956244215 | madhavan123@gamil.com   | 410001 |
+|        1 | Sudha  | Madhavan    | Guntur  | SM Road   |  9895827977 | kavya345@gmail.com | 431202 |
+|        2 | Kavya     | Madhavan  | Delhi  | KM Bazar    |  9856248976 | sudharani474@gmail.com      | 410001 |
++----------+----------+-----------+---------+-----------+-------------+---------------------------+--------+
+5 rows in set (0.00 sec)
+
+mysql> update Persons set FirstName = 'Rohini' WHERE LastName = 'Sindhuri';
+Query OK, 1 row affected (0.07 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+ SELECT * FROM Persons;
++----------+----------+-----------+---------+-----------+-------------+---------------------------+--------+
+| PersonID | LastName | FirstName | Address | City      | PhoneNumber | email                     | zip    |
++----------+----------+-----------+---------+-----------+-------------+---------------------------+--------+
+|        1 | Nukala  | Sudha   | Kadapa  | SR Nagar |  8080867106 | sudhamadhavan1998@gmail.com | 425411 |
+|        1 | Nookala   | Rani  | Tirupati  | NR Colony |  8390867601 | raninookala97@gmail.com | 425411 |
+|        2 | Madhavan  | Kavya    | Nellore  | MK Street |  8956244215 | madhavan123@gamil.com   | 410001 |
+|        1 | Sudha  | Madhavan    | Guntur  | SM Road   |  9895827977 | kavya345@gmail.com | 431202 |
+|        2 | Kavya     | Madhavan  | Delhi  | KM Bazar    |  9856248976 | sudharani474@gmail.com      | 410001 |
++----------+----------+-----------+---------+-----------+-------------+---------------------------+--------+
+5 rows in set (0.00 sec)
